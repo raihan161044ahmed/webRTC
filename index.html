@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Audio Recorder</title>
+<style>
+    body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background: linear-gradient(135deg, #adcc64, #1657e2);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
+
+    .container {
+        background: #ffffff22;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        backdrop-filter: blur(10px);
+        width: 350px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #ffffff;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    button {
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        background: linear-gradient(45deg, #06b, #6cf);
+        border: 0;
+        padding: 12px 24px;
+        border-radius: 25px;
+        margin: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        box-shadow: 0 4px 6px rgba(5, 5, 5, 0.1);
+    }
+
+    button:hover {
+        background: linear-gradient(45deg, #6cf, #06b);
+    }
+
+    button:disabled {
+        background: #fc3535;
+        cursor: not-allowed;
+    }
+
+    #audio {
+        width: 100%;
+        border-radius: 10px;
+        outline: none;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>WebRTC Audio Recorder By Raihan</h1>
+    <button id="start">Start Recording</button>
+    <button id="stop" disabled>Stop Recording</button>
+    <audio id="audio" controls></audio>
+
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
